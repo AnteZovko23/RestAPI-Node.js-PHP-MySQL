@@ -66,7 +66,7 @@
 
 ### Get all odds based on sportID and timestamp request
 
-<img height="400" src="https://github.com/AnteZovko23/RestAPI-Go-MySQL/blob/master/screenshots/Request.png">
+<img height="400" src="https://github.com/AnteZovko23/RestAPI-Node.js-PHP-MySQL/blob/master/screenshots/Request.png">
 
 <br>
 
