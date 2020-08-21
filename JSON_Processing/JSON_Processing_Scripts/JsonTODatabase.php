@@ -16,7 +16,7 @@ error_reporting(E_ERROR | E_WARNING | E_PARSE);
 $jsonFiles = array();
 
 // Gets each json file, extracts data from it, and inserts into database
-foreach (new DirectoryIterator('./JSONFiles/') as $file) {
+foreach (new DirectoryIterator('../JSON_Files/') as $file) {
     if ($file->getExtension() === 'json') {
         
         $jsonFiles[0] = json_decode(file_get_contents($file->getPathname()), true);

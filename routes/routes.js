@@ -12,8 +12,8 @@ var fs = require("fs");
 var helpers = require("./helperFunctions.js")
 const {idParamValidation, timeParamValidation, check, errorResponse} = require('./URLValidator.js');
 var queryObj = {};
-queryObj["getAllOdds"] = fs.readFileSync('./routes/BettingDatabaseQueryGetAllOdds.sql').toString();
-queryObj["getAllSports"] = fs.readFileSync('./routes/BettingDatabaseQueryGetSports.sql').toString();
+queryObj["getAllOdds"] = fs.readFileSync('sql/SELECT_Queries/GetAllOdds.sql').toString();
+queryObj["getAllSports"] = fs.readFileSync('sql/SELECT_Queries/GetSports.sql').toString();
 /**************** */
 
 

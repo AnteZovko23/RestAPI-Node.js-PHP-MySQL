@@ -26,7 +26,7 @@ db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: 'ChoosePassword',
-    database: 'BettingDatabaseV2',
+    database: 'BettingDatabaseV2', // Local Database Name
     multipleStatements: true
 })
 

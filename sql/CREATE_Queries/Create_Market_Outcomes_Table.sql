@@ -1,0 +1,21 @@
+CREATE TABLE `MarketOutcomes` (
+  `eventID` varchar(180) NOT NULL,
+  `id` varchar(180) NOT NULL,
+  `marketID` varchar(180) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `active` varchar(255) DEFAULT NULL,
+  `outcomeSourceMapID` varchar(255) NOT NULL,
+  `sourceOutcomeID` varchar(255) NOT NULL,
+  `specialOutcomeValue` varchar(255) DEFAULT NULL,
+  `specialOutcomeType` varchar(255) DEFAULT NULL,
+  `oddID` varchar(180) NOT NULL,
+  `favourite` varchar(255) DEFAULT NULL,
+  `status` varchar(255) DEFAULT NULL,
+  `marketActive` varchar(255) DEFAULT NULL,
+  `deleted` varchar(255) DEFAULT NULL,
+  `specialValue` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`eventID`,`oddID`,`id`,`marketID`),
+  KEY `index4` (`id`,`oddID`) USING BTREE,
+  KEY `fk_MarketOutcomes_1_idx` (`eventID`,`marketID`),
+  CONSTRAINT `fk_MarketOutcomes_2` FOREIGN KEY (`eventID`, `marketID`) REFERENCES `Markets` (`eventID`, `id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
